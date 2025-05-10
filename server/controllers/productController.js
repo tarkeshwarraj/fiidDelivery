@@ -52,7 +52,7 @@ export const productById = async (req, res) => {
 }
 
 // Change Product inStock: /api/product/add
-export const ChangeStock = async (req, res) => {
+export const changeStock = async (req, res) => {
     try{
         const { id, inStock } = req.body;
         await Product.findByIdAndUpdate(id,  {inStock})
