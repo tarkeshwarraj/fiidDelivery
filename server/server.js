@@ -26,6 +26,7 @@ const allowedOrigins =['http://localhost:5173']
 //इसके लिए, express.json() middleware का उपयोग किया जाता है, जो इस string को JavaScript object में parse करता है।
 //Express या किसी भी backend framework को यह string parse करके एक JavaScript object में बदलने की जरूरत होती है ताकि उस data को easily access किया जा सके।
 app.use(express.json());   
+app.use(express.urlencoded({ extended: true })); 
 
 //बिना इसे parse किए, cookies के string रूप में होने के कारण उन्हें handle करना मुश्किल हो सकता है। cookie-parser इसे आसानी से एक object में बदल देता है।
 app.use(cookieParser());
