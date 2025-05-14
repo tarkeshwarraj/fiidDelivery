@@ -41,10 +41,12 @@ export const AppContextProvider = ({children}) => {
             const {data} = await axios.get('api/user/is-auth');
             if(data.success){
                 setUser(data.user);
-                setCartItems(data.user.cartItems)
+                setCartItems(data.user.cartItems);
+                localStorage.setItem('user', JSON.stringify(data.user)); // 👈 save user
             }
         }catch(error){
             setUser(null);
+            localStorage.removeItem('user'); // 👈 clear on error (e.g. session expired)
         }
     }
 
@@ -121,9 +123,14 @@ export const AppContextProvider = ({children}) => {
     }
 
     useEffect(()=>{
+        const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+        setUser(JSON.parse(storedUser)); // set immediately for UI access
+    }
+    
+        fetchUser();
         fetchSeller();
         fetchProducts();
-        fetchUser();
     },[])
 
     //Update Database Cart Items
@@ -144,7 +151,7 @@ export const AppContextProvider = ({children}) => {
         }
     },[cartItems])
 
-    const value = {navigate, user, setUser, setIsSeller, isSeller, showUserLogin, setShowUserLogin, products, currency,addToCart, updateCartItem,removeFromCart,cartItems, searchQuery, setSearchQuery, getCartAmount, getCartCount, axios, fetchProducts,fetchUser}
+    const value = {navigate, user, setUser, setIsSeller, isSeller, showUserLogin, setShowUserLogin, products, currency,addToCart, updateCartItem,removeFromCart,cartItems, searchQuery, setSearchQuery, getCartAmount, getCartCount, axios, fetchProducts,fetchUser, setCartItems}
 
     return <AppContext.Provider value={value}>
         {children}

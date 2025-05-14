@@ -24,6 +24,7 @@ const Navbar = () => {
             if(data.success){
                 toast.success(data.message);
                 setUser(null);
+                localStorage.removeItem('user');
                 navigate("/");
             }else{
                 toast.error(data.message);

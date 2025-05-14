@@ -27,6 +27,7 @@ const Login = () => {
             });
 
             if(data.success){
+                localStorage.setItem("user", JSON.stringify(data.user));// Save user to localStorage
                 navigate('/')
                 setUser(data.user)
                 setShowUserLogin(false)
@@ -34,7 +35,6 @@ const Login = () => {
                 toast.error(data.message)
             }
             
-
         }catch(error){
             toast.error(error.message)
         }

@@ -20,18 +20,18 @@ import box_icon from "./box_icon.svg";
 import trust_icon from "./trust_icon.svg";
 import black_arrow_icon from "./black_arrow_icon.svg";
 import white_arrow_icon from "./white_arrow_icon.svg";
-import main_banner_bg from "./main_banner_bg.png";
+import main_ban from "./main_ban.png";
 import main_banner_bg_sm from "./main_banner_bg_sm.png";
 import bottom_banner_image from "./bottom_banner_image.png";
 import bottom_banner_image_sm from "./bottom_banner_image_sm.png";
 import add_address_iamge from "./add_address_image.svg";
-import organic_vegitable_image from "./organic_vegitable_image.png";
-import fresh_fruits_image from "./fresh_fruits_image.png";
-import bottles_image from "./bottles_image.png";
-import maggi_image from "./maggi_image.png";
-import dairy_product_image from "./dairy_product_image.png";
-import bakery_image from "./bakery_image.png";
-import grain_image from "./grain_image.png";
+import game_vault from "./game_vault.png";
+import juwa from "./juwa.png";
+import vegas from "./vegas.png";
+import sirius from "./sirius.png";
+import panda_master from "./panda_master.png";
+import orion from "./orion.png";
+import milki_way from "./milki_way.png";
 import potato_image_1 from "./potato_image_1.png";
 import potato_image_2 from "./potato_image_2.png";
 import potato_image_3 from "./potato_image_3.png";
@@ -92,7 +92,7 @@ export const assets = {
   trust_icon,
   black_arrow_icon,
   white_arrow_icon,
-  main_banner_bg,
+  main_ban,
   main_banner_bg_sm,
   bottom_banner_image,
   bottom_banner_image_sm,
@@ -102,45 +102,45 @@ export const assets = {
 
 export const categories = [
   {
-    text: "Organic veggies",
-    path: "Vegetables",
-    image: organic_vegitable_image,
+    text: "GAME VAULT",
+    path: "https://download.gamevault999.com/",
+    image: game_vault,
     bgColor: "#FEF6DA",
   },
   {
-    text: "Fresh Fruits",
-    path: "Fruits",
-    image: fresh_fruits_image,
+    text: "JUWA",
+    path: "https://dl.juwa777.com/",
+    image: juwa,
     bgColor: "#FEE0E0",
   },
   {
-    text: "Cold Drinks",
-    path: "Drinks",
-    image: bottles_image,
+    text: "VEGAS",
+    path: "https://m.lasvegassweeps.com/",
+    image: vegas,
     bgColor: "#F0F5DE",
   },
   {
-    text: "Instant Food",
-    path: "Instant",
-    image: maggi_image,
+    text: "SIRIUS",
+    path: "https://m.gamesirius999.com/",
+    image: sirius,
     bgColor: "#E1F5EC",
   },
   {
-    text: "Dairy Products",
-    path: "Dairy",
-    image: dairy_product_image,
+    text: "PANDA MASTER",
+    path: "https://pandamaster.vip:8888/",
+    image: panda_master,
     bgColor: "#FEE6CD",
   },
   {
-    text: "Bakery & Breads",
-    path: "Bakery",
-    image: bakery_image,
+    text: "ORION",
+    path: "http://start.orionstars.vip:8580/",
+    image: orion,
     bgColor: "#E0F6FE",
   },
   {
-    text: "Grains & Cereals",
-    path: "Grains",
-    image: grain_image,
+    text: "MILKY WAY",
+    path: "https://milkywayapp.xyz/",
+    image: milki_way,
     bgColor: "#F1E3F9",
   },
 ];
@@ -159,7 +159,6 @@ export const footerLinks = [
   {
     title: "Need help?",
     links: [
-      { text: "Delivery Information", url: "#" },
       { text: "Return & Refund Policy", url: "#" },
       { text: "Payment Methods", url: "#" },
       { text: "Track your Order", url: "#" },
@@ -179,19 +178,19 @@ export const footerLinks = [
 
 export const features = [
   {
-    icon: delivery_truck_icon,
-    title: "Fastest Delivery",
-    description: "Groceries delivered in under 30 minutes.",
+    icon: leaf_icon,
+    title: "What’s in it for new players?",
+    description: "💰 100% Welcome Bonus – Double Your First Deposit!",
   },
   {
-    icon: leaf_icon,
-    title: "Freshness Guaranteed",
-    description: "Fresh produce straight from the source.",
+    icon: delivery_truck_icon,
+    title: "How fast can I withdraw my winnings?",
+    description: "⚡ Instant Payouts, No Waiting. Play Smart, Get Paid!",
   },
   {
     icon: coin_icon,
-    title: "Affordable Prices",
-    description: "Quality groceries at unbeatable prices.",
+    title: "Are there any daily rewards?",
+    description: "🎁 Yes! We have Daily Jackpots just waiting for you to claim. Will today be your lucky day?",
   },
   {
     icon: trust_icon,
@@ -706,7 +705,7 @@ export const dummyProducts = [
 
     price: 55,
     offerPrice: 50,
-    image: [maggi_image],
+    image: [sirius],
     description: [
       "Instant and easy to cook",
       "Delicious taste",
