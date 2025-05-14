@@ -23,7 +23,7 @@ import white_arrow_icon from "./white_arrow_icon.svg";
 import main_ban from "./main_ban.png";
 import main_banner_bg_sm from "./main_banner_bg_sm.png";
 import bottom_banner_image from "./bottom_banner_image.png";
-import bottom_banner_image_sm from "./bottom_banner_image_sm.png";
+import bottom_banner_image_sm from "./bottom_banner_image_sm.jpg";
 import add_address_iamge from "./add_address_image.svg";
 import game_vault from "./game_vault.png";
 import juwa from "./juwa.png";
