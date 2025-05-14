@@ -10,7 +10,7 @@ const Footer = () => {
                 <div>
                     <img className="w-34 md:w-32" src={assets.logo} alt="logo" />
                     <p className="max-w-[410px] mt-6">
-                        We deliver fresh groceries and snacks straight to your door. Trusted by Thousand, we aim to make your shopping experience simple and affordable.
+                         Our site is fully mobile-optimized, so you can play your favorite slots, tables, and live games anytime, anywhere.We combine Vegas-style thrills with generous rewards, responsive support, and a sleek, modern platform. Your winning journey starts here.
                     </p>
                 </div>
                 <div className="flex flex-wrap justify-between w-full md:w-[45%] gap-5">

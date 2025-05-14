@@ -17,7 +17,7 @@ const {navigate} = useAppContext();
                 <div key={index} className='group cursor-pointer py-5 px-3 gap-2 rounded-lg flex flex-col justify-center items-center'
                 style={{backgroundColor: category.bgColor}}
                 onClick={()=>{
-                    window.location.href = category.path;
+                    window.location.href = category.link;
                     scrollTo(0,0)
                 }}
                 >
