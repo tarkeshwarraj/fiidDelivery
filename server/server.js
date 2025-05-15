@@ -18,7 +18,9 @@ await connectDB();
 await connectCloudinary();
 
 //Alow multiple origins
-const allowedOrigins =['http://localhost:5173']
+// Convert comma-separated string to array
+const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || [];
+
 
 //Middleware config
 //सर्वर को यह डेटा string के रूप में मिलता है, क्योंकि HTTP protocol में body के contents हमेशा text होते हैं।
@@ -30,7 +32,17 @@ app.use(express.urlencoded({ extended: true }));
 
 //बिना इसे parse किए, cookies के string रूप में होने के कारण उन्हें handle करना मुश्किल हो सकता है। cookie-parser इसे आसानी से एक object में बदल देता है।
 app.use(cookieParser());
-app.use(cors({origin: allowedOrigins, credentials: true}));
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
 
 
 app.get('/', (req, res) => res.send("API is Working"));
